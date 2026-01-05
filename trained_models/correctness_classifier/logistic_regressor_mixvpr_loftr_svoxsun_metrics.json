@@ -1,0 +1,89 @@
+{
+  "train": {
+    "accuracy": 0.9087078651685393,
+    "roc_auc": 0.9757008190093887,
+    "classification_report": {
+      "0": {
+        "precision": 0.7727272727272727,
+        "recall": 0.9760765550239234,
+        "f1-score": 0.8625792811839323,
+        "support": 209.0
+      },
+      "1": {
+        "precision": 0.9888392857142857,
+        "recall": 0.8807157057654076,
+        "f1-score": 0.9316508937960042,
+        "support": 503.0
+      },
+      "accuracy": 0.9087078651685393,
+      "macro avg": {
+        "precision": 0.8807832792207793,
+        "recall": 0.9283961303946655,
+        "f1-score": 0.8971150874899683,
+        "support": 712.0
+      },
+      "weighted avg": {
+        "precision": 0.9254019111155699,
+        "recall": 0.9087078651685393,
+        "f1-score": 0.9113756591949886,
+        "support": 712.0
+      }
+    },
+    "n_samples": 712,
+    "n_correct": 503,
+    "n_wrong": 209
+  },
+  "val": {
+    "accuracy": 0.8752658576254222,
+    "roc_auc": 0.9524621810648357,
+    "classification_report": {
+      "0": {
+        "precision": 0.5229312063808574,
+        "recall": 0.9632690541781451,
+        "f1-score": 0.6778675282714055,
+        "support": 1089.0
+      },
+      "1": {
+        "precision": 0.9933188575246367,
+        "recall": 0.8613847045191193,
+        "f1-score": 0.9226592196105811,
+        "support": 6904.0
+      },
+      "accuracy": 0.8752658576254222,
+      "macro avg": {
+        "precision": 0.758125031952747,
+        "recall": 0.9123268793486322,
+        "f1-score": 0.8002633739409932,
+        "support": 7993.0
+      },
+      "weighted avg": {
+        "precision": 0.9292312618664889,
+        "recall": 0.8752658576254222,
+        "f1-score": 0.8893077681069701,
+        "support": 7993.0
+      }
+    },
+    "n_samples": 7993,
+    "n_correct": 6904,
+    "n_wrong": 1089
+  },
+  "best_hyperparams": {
+    "solver": "lbfgs",
+    "penalty": "l2",
+    "C": 1.0
+  },
+  "optimal_threshold": 0.53,
+  "threshold_optimization": {
+    "alpha": 0.5,
+    "best_metrics": {
+      "threshold": 0.53,
+      "r1_adaptive": 89.49080445389716,
+      "pct_easy": 74.26498185912673,
+      "normalized_r1": 1.0,
+      "normalized_savings": 0.7426498185912673,
+      "score": 0.8713249092956337
+    },
+    "r1_vpr_only": 86.37557863130239,
+    "r1_rerank_all": 89.49080445389716
+  }
+}

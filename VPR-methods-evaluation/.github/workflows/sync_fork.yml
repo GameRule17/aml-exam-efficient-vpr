@@ -1,0 +1,27 @@
+name: Sync Fork
+
+on:
+  workflow_dispatch:  # Allows manual triggering of the action
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/gmberton/VPR-methods-evaluation.git
+
+      - name: Fetch upstream changes
+        run: git fetch upstream
+
+      - name: Merge changes
+        run: |
+          git checkout master
+          git merge upstream/master
+
+      - name: Push changes to fork
+        run: git push origin master || echo "No changes to commit"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
